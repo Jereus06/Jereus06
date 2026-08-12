@@ -29,70 +29,66 @@ jobs:
             done
           done
           
-          # Colors for languages
+          # Emoji circles for languages
+          declare -A emojis
+          emojis["Python"]="🐍"
+          emojis["JavaScript"]="🟨"
+          emojis["TypeScript"]="🔵"
+          emojis["PHP"]="🐘"
+          emojis["HTML"]="🌐"
+          emojis["CSS"]="🎨"
+          emojis["C++"]="⚡"
+          emojis["Go"]="🐹"
+          emojis["Java"]="☕"
+          emojis["Ruby"]="💎"
+          emojis["Hack"]="🚀"
+          emojis["Dockerfile"]="🐳"
+          emojis["Batchfile"]="💻"
+          
+          # Colors for language badges
           declare -A colors
-          colors["Python"]="#3776AB"
-          colors["JavaScript"]="#F7DF1E"
-          colors["TypeScript"]="#3178C6"
-          colors["PHP"]="#777BB4"
-          colors["HTML"]="#E34F26"
-          colors["CSS"]="#1572B6"
-          colors["C++"]="#00599C"
-          colors["Go"]="#00ADD8"
-          colors["Java"]="#007396"
-          colors["Ruby"]="#CC342D"
-          colors["Hack"]="#878787"
-          colors["Dockerfile"]="#2496ED"
-          colors["Batchfile"]="#4D4D4D"
+          colors["Python"]="blue"
+          colors["JavaScript"]="yellow"
+          colors["TypeScript"]="blue"
+          colors["PHP"]="purple"
+          colors["HTML"]="orange"
+          colors["CSS"]="blue"
+          colors["C++"]="blue"
+          colors["Go"]="blue"
+          colors["Hack"]="gray"
+          colors["Dockerfile"]="blue"
+          colors["Batchfile"]="gray"
           
-          # Build HTML/CSS circle design
           output='<div align="center">\n\n### 🎯 Languages Used\n\n'
-          output+='<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">\n'
+          output+='<table>\n<tr>\n'
           
+          count=0
           for lang in $(for l in "${!lang_total[@]}"; do echo "${lang_total[$l]} $l"; done | sort -rn | awk '{print $2}'); do
             bytes=${lang_total[$lang]}
             percentage=$(echo "scale=2; $bytes * 100 / $total_bytes" | bc)
             if [[ $percentage == .* ]]; then
               percentage="0$percentage"
             fi
-            color="${colors[$lang]:-#888888}"
+            emoji="${emojis[$lang]:-📁}"
+            color="${colors[$lang]:-gray}"
             
-            # Create circle with color
-            output+='  <div style="text-align: center;">\n'
-            output+='    <div style="\n'
-            output+='      width: 80px;\n'
-            output+='      height: 80px;\n'
-            output+='      border-radius: 50%;\n'
-            output+='      background: conic-gradient('$color' 0% '$percentage'%, #e0e0e0 '$percentage'% 100%);\n'
-            output+='      display: flex;\n'
-            output+='      align-items: center;\n'
-            output+='      justify-content: center;\n'
-            output+='      margin: 0 auto;\n'
-            output+='      position: relative;\n'
-            output+='    ">\n'
-            output+='      <div style="\n'
-            output+='        width: 55px;\n'
-            output+='        height: 55px;\n'
-            output+='        border-radius: 50%;\n'
-            output+='        background: white;\n'
-            output+='        display: flex;\n'
-            output+='        align-items: center;\n'
-            output+='        justify-content: center;\n'
-            output+='        font-weight: bold;\n'
-            output+='        font-size: 14px;\n'
-            output+='        color: #333;\n'
-            output+='      ">\n'
-            output+='        '$percentage'%\n'
-            output+='      </div>\n'
-            output+='    </div>\n'
-            output+='    <div style="margin-top: 8px; font-weight: bold; font-size: 14px; color: #333;">'$lang'</div>\n'
-            output+='    <div style="font-size: 12px; color: #666;">'$color'</div>\n'
+            # Create visual circle using emoji + percentage
+            output+='<td align="center" style="padding: 10px;">\n'
+            output+='  <div style="font-size: 40px;">'$emoji'</div>\n'
+            output+='  <div style="font-size: 18px; font-weight: bold; color: #333;">'$percentage'%</div>\n'
+            output+='  <div style="font-size: 14px; color: #666;">'$lang'</div>\n'
+            output+='  <div style="margin-top: 5px; width: 60px; height: 4px; background: #e0e0e0; border-radius: 2px; margin-left: auto; margin-right: auto;">\n'
+            output+='    <div style="width: '$percentage'%; height: 4px; background: '$color'; border-radius: 2px;"></div>\n'
             output+='  </div>\n'
+            output+='</td>\n'
+            
+            count=$((count + 1))
+            if [ $((count % 4)) -eq 0 ]; then
+              output+='</tr>\n<tr>\n'
+            fi
           done
+          output+='</tr>\n</table>\n</div>\n'
           
-          output+='</div>\n</div>\n'
-          
-          # Use Python to update README
           python3 - <<EOF
           import re
           from pathlib import Path
@@ -115,5 +111,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md
-          git diff --staged --quiet || git commit -m "Update languages with circles [skip ci]"
+          git diff --staged --quiet || git commit -m "Update languages with emoji circles [skip ci]"
           git push || echo "No changes to push"
