@@ -38,30 +38,218 @@
 
 ### 🎯 Languages Used
 
-<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">
-  <circle cx="100" cy="120" r="80" fill="white" stroke="#333" stroke-width="2"/>
-  <path d="M100 120 L100 120 A80 80 0 1 1 100 120 Z" fill="#777BB4" stroke="white" stroke-width="2"/>
-  <path d="M100 120 L100 120 A80 80 0 0 1 100 120 Z" fill="#E34F26" stroke="white" stroke-width="2"/>
-  <path d="M100 120 L100 120 A80 80 0 0 1 100 120 Z" fill="#878787" stroke="white" stroke-width="2"/>
-  <path d="M100 120 L100 120 A80 80 0 0 1 100 120 Z" fill="#00599C" stroke="white" stroke-width="2"/>
-  <path d="M100 120 L100 120 A80 80 0 0 1 100 120 Z" fill="#3776AB" stroke="white" stroke-width="2"/>
-  <circle cx="100" cy="120" r="40" fill="white" stroke="#333" stroke-width="2"/>
-  <text x="100" y="120" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">5 langs</text>
-</svg>
-
-<table>
-  <tr>
-    <td><span style="display:inline-block;width:12px;height:12px;background:#777BB4;border-radius:50%;"></span> <strong>PHP</strong> 67.68%</td>
-    <td><span style="display:inline-block;width:12px;height:12px;background:#E34F26;border-radius:50%;"></span> <strong>HTML</strong> 12.42%</td>
-    <td><span style="display:inline-block;width:12px;height:12px;background:#878787;border-radius:50%;"></span> <strong>Hack</strong> 11.33%</td>
-    <td><span style="display:inline-block;width:12px;height:12px;background:#00599C;border-radius:50%;"></span> <strong>C++</strong> 7.80%</td>
-  </tr>
-  <tr>
-    <td><span style="display:inline-block;width:12px;height:12px;background:#3776AB;border-radius:50%;"></span> <strong>Python</strong> 0.40%</td>
-    <td><span style="display:inline-block;width:12px;height:12px;background:#2496ED;border-radius:50%;"></span> <strong>Dockerfile</strong> 0.18%</td>
-    <td><span style="display:inline-block;width:12px;height:12px;background:#4D4D4D;border-radius:50%;"></span> <strong>Batchfile</strong> 0.15%</td>
-  </tr>
-</table>
+<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
+  <div style="text-align: center;">
+    <div style="
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: conic-gradient(#777BB4 0% 67.68%, #e0e0e0 67.68% 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      position: relative;
+    ">
+      <div style="
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 14px;
+        color: #333;
+      ">
+        67.68%
+      </div>
+    </div>
+    <div style="margin-top: 8px; font-weight: bold; font-size: 14px; color: #333;">PHP</div>
+    <div style="font-size: 12px; color: #666;">#777BB4</div>
+  </div>
+  <div style="text-align: center;">
+    <div style="
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: conic-gradient(#E34F26 0% 12.42%, #e0e0e0 12.42% 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      position: relative;
+    ">
+      <div style="
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 14px;
+        color: #333;
+      ">
+        12.42%
+      </div>
+    </div>
+    <div style="margin-top: 8px; font-weight: bold; font-size: 14px; color: #333;">HTML</div>
+    <div style="font-size: 12px; color: #666;">#E34F26</div>
+  </div>
+  <div style="text-align: center;">
+    <div style="
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: conic-gradient(#878787 0% 11.33%, #e0e0e0 11.33% 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      position: relative;
+    ">
+      <div style="
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 14px;
+        color: #333;
+      ">
+        11.33%
+      </div>
+    </div>
+    <div style="margin-top: 8px; font-weight: bold; font-size: 14px; color: #333;">Hack</div>
+    <div style="font-size: 12px; color: #666;">#878787</div>
+  </div>
+  <div style="text-align: center;">
+    <div style="
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: conic-gradient(#00599C 0% 7.80%, #e0e0e0 7.80% 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      position: relative;
+    ">
+      <div style="
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 14px;
+        color: #333;
+      ">
+        7.80%
+      </div>
+    </div>
+    <div style="margin-top: 8px; font-weight: bold; font-size: 14px; color: #333;">C++</div>
+    <div style="font-size: 12px; color: #666;">#00599C</div>
+  </div>
+  <div style="text-align: center;">
+    <div style="
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: conic-gradient(#3776AB 0% 0.40%, #e0e0e0 0.40% 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      position: relative;
+    ">
+      <div style="
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 14px;
+        color: #333;
+      ">
+        0.40%
+      </div>
+    </div>
+    <div style="margin-top: 8px; font-weight: bold; font-size: 14px; color: #333;">Python</div>
+    <div style="font-size: 12px; color: #666;">#3776AB</div>
+  </div>
+  <div style="text-align: center;">
+    <div style="
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: conic-gradient(#2496ED 0% 0.18%, #e0e0e0 0.18% 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      position: relative;
+    ">
+      <div style="
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 14px;
+        color: #333;
+      ">
+        0.18%
+      </div>
+    </div>
+    <div style="margin-top: 8px; font-weight: bold; font-size: 14px; color: #333;">Dockerfile</div>
+    <div style="font-size: 12px; color: #666;">#2496ED</div>
+  </div>
+  <div style="text-align: center;">
+    <div style="
+      width: 80px;
+      height: 80px;
+      border-radius: 50%;
+      background: conic-gradient(#4D4D4D 0% 0.15%, #e0e0e0 0.15% 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      position: relative;
+    ">
+      <div style="
+        width: 55px;
+        height: 55px;
+        border-radius: 50%;
+        background: white;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-weight: bold;
+        font-size: 14px;
+        color: #333;
+      ">
+        0.15%
+      </div>
+    </div>
+    <div style="margin-top: 8px; font-weight: bold; font-size: 14px; color: #333;">Batchfile</div>
+    <div style="font-size: 12px; color: #666;">#4D4D4D</div>
+  </div>
+</div>
 </div>
 
 <!-- LANGUAGES_END -->
