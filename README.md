@@ -27,14 +27,11 @@
 
 ## 📊 GitHub Analytics
 
-<p align="center">
-  <a href="https://github.com/Jereus06">
-    <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Jereus06&show_icons=true&theme=radical&include_all_commits=true&count_private=true"/>
-  </a>
-  <a href="https://github.com/Jereus06">
-    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Jereus06&layout=compact&langs_count=8&theme=radical"/>
-  </a>
-</p>
+### 📈 GitHub Stats
+![GitHub Stats](https://github-readme-stats.vercel.app/api?username=Jereus06&show_icons=true&theme=radical)
+
+### 🧠 Top Languages
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Jereus06&layout=compact&theme=radical)
 
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=Jereus06&theme=radical" alt="GitHub Streak" />
