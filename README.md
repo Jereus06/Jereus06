@@ -30,7 +30,7 @@
 
 <p align="center">
   <!-- Stats Card (A+ Ring on Right) -->
-  <img src="https://readme-stats-vercel-main.vercel.app/api?username=Jereus06&show_icons=true&theme=transparent&hide_border=true&rank_icon=percentile" alt="Jereus06's GitHub Stats" />
+  <img src="https://readme-stats-vercel-main.vercel.app/api?username=Jereus06&show_icons=true&theme=radical&hide_border=true&rank_icon=percentile" alt="Jereus06's GitHub Stats" />
   
   <br />
   
