@@ -12,7 +12,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Fetch languages and create circle design
+      - name: Fetch languages and update README
         run: |
           # Fetch all repos
           repos=$(curl -s "https://api.github.com/users/Jereus06/repos?per_page=100" | jq -r '.[].name')
@@ -20,6 +20,7 @@ jobs:
           declare -A lang_total
           total_bytes=0
           
+          # Loop through each repo and get languages
           for repo in $repos; do
             langs=$(curl -s "https://api.github.com/repos/Jereus06/$repo/languages")
             for lang in $(echo "$langs" | jq -r 'keys[]'); do
@@ -29,66 +30,25 @@ jobs:
             done
           done
           
-          # Emoji circles for languages
-          declare -A emojis
-          emojis["Python"]="🐍"
-          emojis["JavaScript"]="🟨"
-          emojis["TypeScript"]="🔵"
-          emojis["PHP"]="🐘"
-          emojis["HTML"]="🌐"
-          emojis["CSS"]="🎨"
-          emojis["C++"]="⚡"
-          emojis["Go"]="🐹"
-          emojis["Java"]="☕"
-          emojis["Ruby"]="💎"
-          emojis["Hack"]="🚀"
-          emojis["Dockerfile"]="🐳"
-          emojis["Batchfile"]="💻"
+          # Build clean language list (exactly like screenshot)
+          output="### Most Used Languages\n\n"
+          if [ $total_bytes -gt 0 ]; then
+            # Sort by bytes (descending) and format
+            for lang in $(for l in "${!lang_total[@]}"; do echo "${lang_total[$l]} $l"; done | sort -rn | awk '{print $2}'); do
+              bytes=${lang_total[$lang]}
+              percentage=$(echo "scale=2; $bytes * 100 / $total_bytes" | bc)
+              # Fix percentage formatting (add leading zero)
+              if [[ $percentage == .* ]]; then
+                percentage="0$percentage"
+              fi
+              # Single line: "- Language Percentage%"
+              output+="- $lang $percentage%\n"
+            done
+          else
+            output+="- No languages detected yet\n"
+          fi
           
-          # Colors for language badges
-          declare -A colors
-          colors["Python"]="blue"
-          colors["JavaScript"]="yellow"
-          colors["TypeScript"]="blue"
-          colors["PHP"]="purple"
-          colors["HTML"]="orange"
-          colors["CSS"]="blue"
-          colors["C++"]="blue"
-          colors["Go"]="blue"
-          colors["Hack"]="gray"
-          colors["Dockerfile"]="blue"
-          colors["Batchfile"]="gray"
-          
-          output='<div align="center">\n\n### 🎯 Languages Used\n\n'
-          output+='<table>\n<tr>\n'
-          
-          count=0
-          for lang in $(for l in "${!lang_total[@]}"; do echo "${lang_total[$l]} $l"; done | sort -rn | awk '{print $2}'); do
-            bytes=${lang_total[$lang]}
-            percentage=$(echo "scale=2; $bytes * 100 / $total_bytes" | bc)
-            if [[ $percentage == .* ]]; then
-              percentage="0$percentage"
-            fi
-            emoji="${emojis[$lang]:-📁}"
-            color="${colors[$lang]:-gray}"
-            
-            # Create visual circle using emoji + percentage
-            output+='<td align="center" style="padding: 10px;">\n'
-            output+='  <div style="font-size: 40px;">'$emoji'</div>\n'
-            output+='  <div style="font-size: 18px; font-weight: bold; color: #333;">'$percentage'%</div>\n'
-            output+='  <div style="font-size: 14px; color: #666;">'$lang'</div>\n'
-            output+='  <div style="margin-top: 5px; width: 60px; height: 4px; background: #e0e0e0; border-radius: 2px; margin-left: auto; margin-right: auto;">\n'
-            output+='    <div style="width: '$percentage'%; height: 4px; background: '$color'; border-radius: 2px;"></div>\n'
-            output+='  </div>\n'
-            output+='</td>\n'
-            
-            count=$((count + 1))
-            if [ $((count % 4)) -eq 0 ]; then
-              output+='</tr>\n<tr>\n'
-            fi
-          done
-          output+='</tr>\n</table>\n</div>\n'
-          
+          # Update README using Python
           python3 - <<EOF
           import re
           from pathlib import Path
@@ -111,5 +71,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md
-          git diff --staged --quiet || git commit -m "Update languages with emoji circles [skip ci]"
+          git diff --staged --quiet || git commit -m "Update languages [skip ci]"
           git push || echo "No changes to push"
