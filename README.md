@@ -38,218 +38,68 @@
 
 ### 🎯 Languages Used
 
-<div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 20px;">
-  <div style="text-align: center;">
-    <div style="
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: conic-gradient(#777BB4 0% 67.68%, #e0e0e0 67.68% 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto;
-      position: relative;
-    ">
-      <div style="
-        width: 55px;
-        height: 55px;
-        border-radius: 50%;
-        background: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        font-size: 14px;
-        color: #333;
-      ">
-        67.68%
-      </div>
-    </div>
-    <div style="margin-top: 8px; font-weight: bold; font-size: 14px; color: #333;">PHP</div>
-    <div style="font-size: 12px; color: #666;">#777BB4</div>
+<table>
+<tr>
+<td align="center" style="padding: 10px;">
+  <div style="font-size: 40px;">🐘</div>
+  <div style="font-size: 18px; font-weight: bold; color: #333;">67.68%</div>
+  <div style="font-size: 14px; color: #666;">PHP</div>
+  <div style="margin-top: 5px; width: 60px; height: 4px; background: #e0e0e0; border-radius: 2px; margin-left: auto; margin-right: auto;">
+    <div style="width: 67.68%; height: 4px; background: purple; border-radius: 2px;"></div>
   </div>
-  <div style="text-align: center;">
-    <div style="
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: conic-gradient(#E34F26 0% 12.42%, #e0e0e0 12.42% 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto;
-      position: relative;
-    ">
-      <div style="
-        width: 55px;
-        height: 55px;
-        border-radius: 50%;
-        background: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        font-size: 14px;
-        color: #333;
-      ">
-        12.42%
-      </div>
-    </div>
-    <div style="margin-top: 8px; font-weight: bold; font-size: 14px; color: #333;">HTML</div>
-    <div style="font-size: 12px; color: #666;">#E34F26</div>
+</td>
+<td align="center" style="padding: 10px;">
+  <div style="font-size: 40px;">🌐</div>
+  <div style="font-size: 18px; font-weight: bold; color: #333;">12.42%</div>
+  <div style="font-size: 14px; color: #666;">HTML</div>
+  <div style="margin-top: 5px; width: 60px; height: 4px; background: #e0e0e0; border-radius: 2px; margin-left: auto; margin-right: auto;">
+    <div style="width: 12.42%; height: 4px; background: orange; border-radius: 2px;"></div>
   </div>
-  <div style="text-align: center;">
-    <div style="
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: conic-gradient(#878787 0% 11.33%, #e0e0e0 11.33% 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto;
-      position: relative;
-    ">
-      <div style="
-        width: 55px;
-        height: 55px;
-        border-radius: 50%;
-        background: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        font-size: 14px;
-        color: #333;
-      ">
-        11.33%
-      </div>
-    </div>
-    <div style="margin-top: 8px; font-weight: bold; font-size: 14px; color: #333;">Hack</div>
-    <div style="font-size: 12px; color: #666;">#878787</div>
+</td>
+<td align="center" style="padding: 10px;">
+  <div style="font-size: 40px;">🚀</div>
+  <div style="font-size: 18px; font-weight: bold; color: #333;">11.33%</div>
+  <div style="font-size: 14px; color: #666;">Hack</div>
+  <div style="margin-top: 5px; width: 60px; height: 4px; background: #e0e0e0; border-radius: 2px; margin-left: auto; margin-right: auto;">
+    <div style="width: 11.33%; height: 4px; background: gray; border-radius: 2px;"></div>
   </div>
-  <div style="text-align: center;">
-    <div style="
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: conic-gradient(#00599C 0% 7.80%, #e0e0e0 7.80% 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto;
-      position: relative;
-    ">
-      <div style="
-        width: 55px;
-        height: 55px;
-        border-radius: 50%;
-        background: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        font-size: 14px;
-        color: #333;
-      ">
-        7.80%
-      </div>
-    </div>
-    <div style="margin-top: 8px; font-weight: bold; font-size: 14px; color: #333;">C++</div>
-    <div style="font-size: 12px; color: #666;">#00599C</div>
+</td>
+<td align="center" style="padding: 10px;">
+  <div style="font-size: 40px;">⚡</div>
+  <div style="font-size: 18px; font-weight: bold; color: #333;">7.80%</div>
+  <div style="font-size: 14px; color: #666;">C++</div>
+  <div style="margin-top: 5px; width: 60px; height: 4px; background: #e0e0e0; border-radius: 2px; margin-left: auto; margin-right: auto;">
+    <div style="width: 7.80%; height: 4px; background: blue; border-radius: 2px;"></div>
   </div>
-  <div style="text-align: center;">
-    <div style="
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: conic-gradient(#3776AB 0% 0.40%, #e0e0e0 0.40% 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto;
-      position: relative;
-    ">
-      <div style="
-        width: 55px;
-        height: 55px;
-        border-radius: 50%;
-        background: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        font-size: 14px;
-        color: #333;
-      ">
-        0.40%
-      </div>
-    </div>
-    <div style="margin-top: 8px; font-weight: bold; font-size: 14px; color: #333;">Python</div>
-    <div style="font-size: 12px; color: #666;">#3776AB</div>
+</td>
+</tr>
+<tr>
+<td align="center" style="padding: 10px;">
+  <div style="font-size: 40px;">🐍</div>
+  <div style="font-size: 18px; font-weight: bold; color: #333;">0.40%</div>
+  <div style="font-size: 14px; color: #666;">Python</div>
+  <div style="margin-top: 5px; width: 60px; height: 4px; background: #e0e0e0; border-radius: 2px; margin-left: auto; margin-right: auto;">
+    <div style="width: 0.40%; height: 4px; background: blue; border-radius: 2px;"></div>
   </div>
-  <div style="text-align: center;">
-    <div style="
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: conic-gradient(#2496ED 0% 0.18%, #e0e0e0 0.18% 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto;
-      position: relative;
-    ">
-      <div style="
-        width: 55px;
-        height: 55px;
-        border-radius: 50%;
-        background: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        font-size: 14px;
-        color: #333;
-      ">
-        0.18%
-      </div>
-    </div>
-    <div style="margin-top: 8px; font-weight: bold; font-size: 14px; color: #333;">Dockerfile</div>
-    <div style="font-size: 12px; color: #666;">#2496ED</div>
+</td>
+<td align="center" style="padding: 10px;">
+  <div style="font-size: 40px;">🐳</div>
+  <div style="font-size: 18px; font-weight: bold; color: #333;">0.18%</div>
+  <div style="font-size: 14px; color: #666;">Dockerfile</div>
+  <div style="margin-top: 5px; width: 60px; height: 4px; background: #e0e0e0; border-radius: 2px; margin-left: auto; margin-right: auto;">
+    <div style="width: 0.18%; height: 4px; background: blue; border-radius: 2px;"></div>
   </div>
-  <div style="text-align: center;">
-    <div style="
-      width: 80px;
-      height: 80px;
-      border-radius: 50%;
-      background: conic-gradient(#4D4D4D 0% 0.15%, #e0e0e0 0.15% 100%);
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      margin: 0 auto;
-      position: relative;
-    ">
-      <div style="
-        width: 55px;
-        height: 55px;
-        border-radius: 50%;
-        background: white;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-weight: bold;
-        font-size: 14px;
-        color: #333;
-      ">
-        0.15%
-      </div>
-    </div>
-    <div style="margin-top: 8px; font-weight: bold; font-size: 14px; color: #333;">Batchfile</div>
-    <div style="font-size: 12px; color: #666;">#4D4D4D</div>
+</td>
+<td align="center" style="padding: 10px;">
+  <div style="font-size: 40px;">💻</div>
+  <div style="font-size: 18px; font-weight: bold; color: #333;">0.15%</div>
+  <div style="font-size: 14px; color: #666;">Batchfile</div>
+  <div style="margin-top: 5px; width: 60px; height: 4px; background: #e0e0e0; border-radius: 2px; margin-left: auto; margin-right: auto;">
+    <div style="width: 0.15%; height: 4px; background: gray; border-radius: 2px;"></div>
   </div>
-</div>
+</td>
+</tr>
+</table>
 </div>
 
 <!-- LANGUAGES_END -->
