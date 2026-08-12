@@ -33,21 +33,6 @@
 
 ![Top Languages](https://readme-stats-vercel-main.vercel.app/api/top-langs/?username=Jereus06&layout=compact&theme=transparent&hide_border=true&langs_count=6)
 
-<!-- LANGUAGES_START -->
-<div style="display:flex;width:100%;height:12px;border-top:2px solid #fff;background:#1a1a1a;border-radius:4px;overflow:hidden;"><span style="display:inline-block;width:67.68%;background:#4b5a8a;">&nbsp;</span><span style="display:inline-block;width:12.42%;background:#4b5a8a;">&nbsp;</span><span style="display:inline-block;width:11.33%;background:#4b5a8a;">&nbsp;</span><span style="display:inline-block;width:7.80%;background:#4b5a8a;">&nbsp;</span><span style="display:inline-block;width:0.40%;background:#4b5a8a;">&nbsp;</span><span style="display:inline-block;width:0.18%;background:#4b5a8a;">&nbsp;</span><span style="display:inline-block;width:0.15%;background:#4b5a8a;">&nbsp;</span></div>
-
-### Most Used Languages
-
-- PHP 67.68%
-- HTML 12.42%
-- Hack 11.33%
-- C++ 7.80%
-- Python 0.40%
-- Dockerfile 0.18%
-- Batchfile 0.15%
-
-<!-- LANGUAGES_END -->
-
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=Jereus06&theme=radical" alt="GitHub Streak" />
 </p>
