@@ -34,15 +34,73 @@
 </p>
 
 <!-- LANGUAGES_START -->
-### 📊 Most Used Languages
+<div align="center">
 
-- **Python**: .40%
-- **Dockerfile**: .18%
-- **Batchfile**: .15%
-- **Hack**: 11.33%
-- **C++**: 7.80%
-- **PHP**: 67.68%
-- **HTML**: 12.42%
+### 🎯 Languages Used
+
+<table>
+<tr>
+<td align="center">
+  <svg width="80" height="80" viewBox="0 0 80 80">
+    <circle cx="40" cy="40" r="30" fill="none" stroke="#eee" stroke-width="8"/>
+    <circle cx="40" cy="40" r="30" fill="none" stroke="#4CAF50" stroke-width="8" stroke-dasharray="191.53 283" stroke-dashoffset="0" transform="rotate(-90 40 40)"/>
+    <text x="40" y="40" text-anchor="middle" font-size="14" font-weight="bold" fill="#333" dy=".3em">67.68%</text>
+  </svg>
+  <div><strong>PHP</strong></div>
+</td>
+<td align="center">
+  <svg width="80" height="80" viewBox="0 0 80 80">
+    <circle cx="40" cy="40" r="30" fill="none" stroke="#eee" stroke-width="8"/>
+    <circle cx="40" cy="40" r="30" fill="none" stroke="#4CAF50" stroke-width="8" stroke-dasharray="35.14 283" stroke-dashoffset="0" transform="rotate(-90 40 40)"/>
+    <text x="40" y="40" text-anchor="middle" font-size="14" font-weight="bold" fill="#333" dy=".3em">12.42%</text>
+  </svg>
+  <div><strong>HTML</strong></div>
+</td>
+<td align="center">
+  <svg width="80" height="80" viewBox="0 0 80 80">
+    <circle cx="40" cy="40" r="30" fill="none" stroke="#eee" stroke-width="8"/>
+    <circle cx="40" cy="40" r="30" fill="none" stroke="#4CAF50" stroke-width="8" stroke-dasharray="32.06 283" stroke-dashoffset="0" transform="rotate(-90 40 40)"/>
+    <text x="40" y="40" text-anchor="middle" font-size="14" font-weight="bold" fill="#333" dy=".3em">11.33%</text>
+  </svg>
+  <div><strong>Hack</strong></div>
+</td>
+<td align="center">
+  <svg width="80" height="80" viewBox="0 0 80 80">
+    <circle cx="40" cy="40" r="30" fill="none" stroke="#eee" stroke-width="8"/>
+    <circle cx="40" cy="40" r="30" fill="none" stroke="#4CAF50" stroke-width="8" stroke-dasharray="22.07 283" stroke-dashoffset="0" transform="rotate(-90 40 40)"/>
+    <text x="40" y="40" text-anchor="middle" font-size="14" font-weight="bold" fill="#333" dy=".3em">7.80%</text>
+  </svg>
+  <div><strong>C++</strong></div>
+</td>
+</tr>
+<tr>
+<td align="center">
+  <svg width="80" height="80" viewBox="0 0 80 80">
+    <circle cx="40" cy="40" r="30" fill="none" stroke="#eee" stroke-width="8"/>
+    <circle cx="40" cy="40" r="30" fill="none" stroke="#4CAF50" stroke-width="8" stroke-dasharray="1.13 283" stroke-dashoffset="0" transform="rotate(-90 40 40)"/>
+    <text x="40" y="40" text-anchor="middle" font-size="14" font-weight="bold" fill="#333" dy=".3em">0.40%</text>
+  </svg>
+  <div><strong>Python</strong></div>
+</td>
+<td align="center">
+  <svg width="80" height="80" viewBox="0 0 80 80">
+    <circle cx="40" cy="40" r="30" fill="none" stroke="#eee" stroke-width="8"/>
+    <circle cx="40" cy="40" r="30" fill="none" stroke="#4CAF50" stroke-width="8" stroke-dasharray=".50 283" stroke-dashoffset="0" transform="rotate(-90 40 40)"/>
+    <text x="40" y="40" text-anchor="middle" font-size="14" font-weight="bold" fill="#333" dy=".3em">0.18%</text>
+  </svg>
+  <div><strong>Dockerfile</strong></div>
+</td>
+<td align="center">
+  <svg width="80" height="80" viewBox="0 0 80 80">
+    <circle cx="40" cy="40" r="30" fill="none" stroke="#eee" stroke-width="8"/>
+    <circle cx="40" cy="40" r="30" fill="none" stroke="#4CAF50" stroke-width="8" stroke-dasharray=".42 283" stroke-dashoffset="0" transform="rotate(-90 40 40)"/>
+    <text x="40" y="40" text-anchor="middle" font-size="14" font-weight="bold" fill="#333" dy=".3em">0.15%</text>
+  </svg>
+  <div><strong>Batchfile</strong></div>
+</td>
+</tr>
+</table>
+</div>
 
 <!-- LANGUAGES_END -->
 
