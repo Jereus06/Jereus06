@@ -1,5 +1,5 @@
 <h1 align="center">Hi 👋, I'm Jericho</h1>
-<h3 align="center">A BSCS-Data Science student passionate about building data-driven solutions</h3>
+<h3 align="center">Data science student who believes every dataset has a story to tell</h3>
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=jerichohilario&label=Profile%20views&color=0e75b6&style=flat" alt="jerichohilario" /> </p>
 
