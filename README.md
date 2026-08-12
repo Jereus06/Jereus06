@@ -27,18 +27,9 @@
 
 ## 📊 GitHub Analytics
 
-### 📈 GitHub Stats
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api?username=Jereus06&show_icons=true&theme=radical&include_all_commits=true&count_private=true" alt="GitHub Stats" />
-</p>
+![Your GitHub Stats](https://github-readme-stats.vercel.app/api?username=Jereus06&show_icons=true&theme=radical)
 
-### 🧠 Most Used Languages
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Jereus06&layout=compact&langs_count=8&theme=radical" alt="Top Languages" />
-</p>
+![Top Languages](https://github-readme-stats.vercel.app/api/top-langs/?username=Jereus06&layout=compact&theme=radical)
 
-### 🔥 Contribution Streak
-<p align="center">
-  <img src="https://github-readme-streak-stats.herokuapp.com/?user=Jereus06&theme=radical" alt="GitHub Streak" />
-</p>
+![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Jereus06&theme=radical)
 
