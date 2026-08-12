@@ -29,12 +29,13 @@
 
 ### 📈 GitHub Stats
 
-| Metric | Value |
-|--------|-------|
-| ⭐ Total Stars | ![Stars](https://img.shields.io/github/stars/Jereus06?style=flat-square&label=Stars&color=blue) |
-| 👥 Followers | ![Followers](https://img.shields.io/github/followers/Jereus06?style=flat-square&label=Followers&color=purple) |
-| 📝 Repositories | ![Repos](https://img.shields.io/badge/dynamic/json?color=orange&label=Repos&query=public_repos&url=https%3A%2F%2Fapi.github.com%2Fusers%2FJereus06) |
-| 🍴 Total Forks | ![Forks](https://img.shields.io/github/forks/Jereus06?style=flat-square&label=Forks&color=green) |
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api?username=Jereus06&show_icons=true&theme=radical" alt="GitHub Stats" />
+</p>
+
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Jereus06&layout=compact&theme=radical" alt="Top Languages" />
+</p>
 
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=Jereus06&theme=radical" alt="GitHub Streak" />
