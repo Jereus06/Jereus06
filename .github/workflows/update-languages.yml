@@ -12,16 +12,13 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Fetch languages from GitHub API
+      - name: Fetch languages and create circle badges
         run: |
-          # Fetch all repos
           repos=$(curl -s "https://api.github.com/users/Jereus06/repos?per_page=100" | jq -r '.[].name')
           
-          # Initialize arrays
           declare -A lang_total
           total_bytes=0
           
-          # Loop through each repo and get languages
           for repo in $repos; do
             langs=$(curl -s "https://api.github.com/repos/Jereus06/$repo/languages")
             for lang in $(echo "$langs" | jq -r 'keys[]'); do
@@ -31,41 +28,48 @@ jobs:
             done
           done
           
-          # Build the output
-          output="### 📊 Most Used Languages\n\n"
-          if [ $total_bytes -gt 0 ]; then
-            for lang in "${!lang_total[@]}"; do
-              percentage=$(echo "scale=2; ${lang_total[$lang]} * 100 / $total_bytes" | bc)
-              output+="- **$lang**: $percentage%\n"
-            done
-          else
-            output+="- No languages detected yet\n"
-          fi
+          output='<div align="center">\n\n### 🎯 Languages Used\n\n'
           
-          # Use Python to update README
+          # Create circle progress bars
+          output+='<table>\n<tr>\n'
+          count=0
+          for lang in $(for l in "${!lang_total[@]}"; do echo "${lang_total[$l]} $l"; done | sort -rn | awk '{print $2}'); do
+            bytes=${lang_total[$lang]}
+            percentage=$(echo "scale=2; $bytes * 100 / $total_bytes" | bc)
+            if [[ $percentage == .* ]]; then
+              percentage="0$percentage"
+            fi
+            # Calculate circle stroke
+            dash=$(echo "scale=0; $percentage * 2.83" | bc)
+            output+='<td align="center">\n'
+            output+='  <svg width="80" height="80" viewBox="0 0 80 80">\n'
+            output+='    <circle cx="40" cy="40" r="30" fill="none" stroke="#eee" stroke-width="8"/>\n'
+            output+='    <circle cx="40" cy="40" r="30" fill="none" stroke="#4CAF50" stroke-width="8" stroke-dasharray="'"$dash"' 283" stroke-dashoffset="0" transform="rotate(-90 40 40)"/>\n'
+            output+='    <text x="40" y="40" text-anchor="middle" font-size="14" font-weight="bold" fill="#333" dy=".3em">'"$percentage"'%</text>\n'
+            output+='  </svg>\n'
+            output+='  <div><strong>'$lang'</strong></div>\n'
+            output+='</td>\n'
+            count=$((count + 1))
+            if [ $((count % 4)) -eq 0 ]; then
+              output+='</tr>\n<tr>\n'
+            fi
+          done
+          output+='</tr>\n</table>\n</div>\n'
+          
           python3 - <<EOF
           import re
           from pathlib import Path
           
-          # Read the README
           readme = Path("README.md")
           text = readme.read_text()
           
-          # Define the markers
           start = "<!-- LANGUAGES_START -->"
           end = "<!-- LANGUAGES_END -->"
-          
-          # Get the output from shell
           output = """$output"""
-          
-          # Create the replacement
           replacement = f"{start}\n{output}\n{end}"
           
-          # Replace everything between the markers
           pattern = re.compile(rf"{start}.*?{end}", re.DOTALL)
           new_text = pattern.sub(replacement, text)
-          
-          # Write back
           readme.write_text(new_text)
           EOF
       
@@ -74,5 +78,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md
-          git diff --staged --quiet || git commit -m "Auto-update languages [skip ci]"
+          git diff --staged --quiet || git commit -m "Update languages with circles [skip ci]"
           git push || echo "No changes to push"
