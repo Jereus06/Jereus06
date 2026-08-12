@@ -11,13 +11,6 @@
   - **MLOps tools** (MLflow, Docker, Kubernetes)
   - **Cloud AI platforms** (AWS SageMaker, GCP Vertex AI)
 
-- 💬 Ask me about:
-  - **Python** for data science (Pandas, NumPy, scikit-learn)
-  - **SQL** and database optimization
-  - **Machine learning** model building & evaluation
-  - **Data visualization** (Matplotlib, Seaborn, Tableau)
-  - **Full-stack data apps** with React + FastAPI
-
 - 📫 How to reach me: **jerichohilario6@gmail.com**
 
 - ⚡ Know about my experiences: **https://jereus06.github.io/portfolio.web/**
