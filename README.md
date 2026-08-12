@@ -29,9 +29,7 @@
 
 ### 📈 GitHub Stats
 
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Jereus06&theme=radical" alt="Profile Details" />
-</p>
+![Jereus06's GitHub Stats](https://github-readme-stats.vercel.app/api?username=Jereus06&show_icons=true&theme=dark&hide_border=true&rank_icon=percentile)
 
 <!-- LANGUAGES_START -->
 <div style="display:flex;width:100%;height:12px;border-top:2px solid #fff;background:#1a1a1a;border-radius:4px;overflow:hidden;"><span style="display:inline-block;width:67.68%;background:#4b5a8a;">&nbsp;</span><span style="display:inline-block;width:12.42%;background:#4b5a8a;">&nbsp;</span><span style="display:inline-block;width:11.33%;background:#4b5a8a;">&nbsp;</span><span style="display:inline-block;width:7.80%;background:#4b5a8a;">&nbsp;</span><span style="display:inline-block;width:0.40%;background:#4b5a8a;">&nbsp;</span><span style="display:inline-block;width:0.18%;background:#4b5a8a;">&nbsp;</span><span style="display:inline-block;width:0.15%;background:#4b5a8a;">&nbsp;</span></div>
