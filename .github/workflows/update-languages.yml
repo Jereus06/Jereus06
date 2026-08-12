@@ -1,10 +1,6 @@
 name: Update Languages
 
 on:
-  push:
-    branches: [ main ]
-  schedule:
-    - cron: '0 0 * * *'
   workflow_dispatch:
 
 permissions:
@@ -16,42 +12,57 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Fetch languages from GitHub API
+      - name: Fetch languages and update README
         run: |
-          # Fetch all repos
+          # Get all repos
           repos=$(curl -s "https://api.github.com/users/Jereus06/repos?per_page=100" | jq -r '.[].name')
           
-          # Initialize variables
-          declare -A lang_total
-          total_bytes=0
+          # Create the language list
+          echo "### 📊 Most Used Languages" > languages.txt
+          echo "" >> languages.txt
           
-          # Loop through each repo and get languages
+          # Loop through each repo
           for repo in $repos; do
             langs=$(curl -s "https://api.github.com/repos/Jereus06/$repo/languages")
             for lang in $(echo $langs | jq -r 'keys[]'); do
               bytes=$(echo $langs | jq -r ".[\"$lang\"]")
-              lang_total["$lang"]=$(( ${lang_total["$lang"]:-0} + $bytes ))
-              total_bytes=$(( $total_bytes + $bytes ))
+              echo "$lang $bytes" >> temp.txt
             done
           done
           
-          # Calculate percentages and create markdown
-          output="### 📊 Most Used Languages\n\n"
-          for lang in "${!lang_total[@]}"; do
-            percentage=$(echo "scale=2; ${lang_total[$lang]} * 100 / $total_bytes" | bc)
-            output+="- **$lang**: $percentage%\n"
-          done
+          # Calculate totals
+          if [ -f temp.txt ]; then
+            total=$(awk '{sum+=$2} END {print sum}' temp.txt)
+            if [ "$total" -gt 0 ]; then
+              awk -v total="$total" '{lang[$1]+=$2} END {for (l in lang) printf "- **%s**: %.2f%%\n", l, (lang[l]/total)*100}' temp.txt | sort -rn -t':' -k2 >> languages.txt
+            else
+              echo "- No languages detected yet" >> languages.txt
+            fi
+            rm temp.txt
+          else
+            echo "- No languages detected yet" >> languages.txt
+          fi
           
-          # Sort by percentage (highest first)
-          output=$(echo -e "$output" | sort -rn -t':' -k2)
+          # Read the content
+          content=$(cat languages.txt)
           
-          # Update the README
-          sed -i "/<!-- LANGUAGES_START -->/,/<!-- LANGUAGES_END -->/c\\<!-- LANGUAGES_START -->\n$output\n<!-- LANGUAGES_END -->" README.md
+          # Use Python to update README (more reliable than sed)
+          python3 -c "
+import re
+with open('README.md', 'r') as f:
+    content = f.read()
+start = '<!-- LANGUAGES_START -->'
+end = '<!-- LANGUAGES_END -->'
+new_content = '''$content'''
+pattern = re.compile(r'$start.*?$end', re.DOTALL)
+with open('README.md', 'w') as f:
+    f.write(pattern.sub(f'$start\n{new_content}\n$end', content))
+"
       
       - name: Commit changes
         run: |
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md
-          git commit -m "Auto-update languages" || echo "No changes to commit"
+          git diff --staged --quiet || git commit -m "Auto-update languages [skip ci]"
           git push || echo "No changes to push"
