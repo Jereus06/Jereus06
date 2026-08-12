@@ -29,7 +29,7 @@
 
 ### 📈 GitHub Stats
 
-[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=anuraghazra)](https://github.com/anuraghazra/github-readme-stats)
+[![Anurag's GitHub stats](https://github-readme-stats.vercel.app/api?username=Jereus06)](https://github.com/anuraghazra/github-readme-stats)
 
 <!-- LANGUAGES_START -->
 <div style="display:flex;width:100%;height:12px;border-top:2px solid #fff;background:#1a1a1a;border-radius:4px;overflow:hidden;"><span style="display:inline-block;width:67.68%;background:#4b5a8a;">&nbsp;</span><span style="display:inline-block;width:12.42%;background:#4b5a8a;">&nbsp;</span><span style="display:inline-block;width:11.33%;background:#4b5a8a;">&nbsp;</span><span style="display:inline-block;width:7.80%;background:#4b5a8a;">&nbsp;</span><span style="display:inline-block;width:0.40%;background:#4b5a8a;">&nbsp;</span><span style="display:inline-block;width:0.18%;background:#4b5a8a;">&nbsp;</span><span style="display:inline-block;width:0.15%;background:#4b5a8a;">&nbsp;</span></div>
