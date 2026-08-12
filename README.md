@@ -34,6 +34,16 @@
 </p>
 
 <!-- LANGUAGES_START -->
+### 📊 Most Used Languages
+
+- **Python**: .40%
+- **Dockerfile**: .18%
+- **Batchfile**: .15%
+- **Hack**: 11.33%
+- **C++**: 7.80%
+- **PHP**: 67.68%
+- **HTML**: 12.42%
+
 <!-- LANGUAGES_END -->
 
 <p align="center">
