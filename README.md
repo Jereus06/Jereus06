@@ -36,7 +36,7 @@
   <br />
   
   <!-- Top Languages (Compact Bar) -->
-  <img src="https://readme-stats-vercel-main.vercel.app/api/top-langs/?username=Jereus06&layout=donut-vertical&theme=highcontrast&hide_border=true&langs_count=6&font_size=24" alt="Top Languages" height="195" />
+  <img src="https://readme-stats-vercel-main.vercel.app/api/top-langs/?username=Jereus06&layout=donut-vertical&theme=highcontrast&hide_border=true&langs_count=6&font_size=34" alt="Top Languages" height="195" />
   <br />
   
   <!-- GitHub Streak Stats -->
