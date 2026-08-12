@@ -30,12 +30,12 @@
 
 <p align="center">
   <!-- Stats Card (A+ Ring on Right) -->
-  <img src="https://readme-stats-vercel-main.vercel.app/api?username=Jereus06&show_icons=true&theme=highcontrast&hide_border=true&rank_icon=percentile" alt="Jereus06's GitHub Stats" />
+  <img src="https://readme-stats-vercel-main.vercel.app/api?username=Jereus06&show_icons=true&theme=highcontrast&hide_border=true&rank_icon=percentile" alt="Jereus06's GitHub Stats" height="195" />
   
   <br />
   
   <!-- Top Languages (Compact Bar) -->
-  <img src="https://readme-stats-vercel-main.vercel.app/api/top-langs/?username=Jereus06&layout=compact&theme=highcontrast&hide_border=true&langs_count=6" alt="Top Languages" />
+  <img src="https://readme-stats-vercel-main.vercel.app/api/top-langs/?username=Jereus06&layout=pie&theme=highcontrast&hide_border=true&langs_count=6" alt="Top Languages" height="195" />
   
   <br />
   
