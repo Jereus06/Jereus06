@@ -12,52 +12,62 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Fetch languages and update README
+      - name: Fetch languages from GitHub API
         run: |
-          # Get all repos
+          # Fetch all repos
           repos=$(curl -s "https://api.github.com/users/Jereus06/repos?per_page=100" | jq -r '.[].name')
           
-          # Create the language list
-          echo "### 📊 Most Used Languages" > languages.txt
-          echo "" >> languages.txt
+          # Initialize arrays
+          declare -A lang_total
+          total_bytes=0
           
-          # Loop through each repo
+          # Loop through each repo and get languages
           for repo in $repos; do
             langs=$(curl -s "https://api.github.com/repos/Jereus06/$repo/languages")
-            for lang in $(echo $langs | jq -r 'keys[]'); do
-              bytes=$(echo $langs | jq -r ".[\"$lang\"]")
-              echo "$lang $bytes" >> temp.txt
+            for lang in $(echo "$langs" | jq -r 'keys[]'); do
+              bytes=$(echo "$langs" | jq -r ".[\"$lang\"]")
+              lang_total["$lang"]=$(( ${lang_total["$lang"]:-0} + bytes ))
+              total_bytes=$(( total_bytes + bytes ))
             done
           done
           
-          # Calculate totals
-          if [ -f temp.txt ]; then
-            total=$(awk '{sum+=$2} END {print sum}' temp.txt)
-            if [ "$total" -gt 0 ]; then
-              awk -v total="$total" '{lang[$1]+=$2} END {for (l in lang) printf "- **%s**: %.2f%%\n", l, (lang[l]/total)*100}' temp.txt | sort -rn -t':' -k2 >> languages.txt
-            else
-              echo "- No languages detected yet" >> languages.txt
-            fi
-            rm temp.txt
+          # Build the output
+          output="### 📊 Most Used Languages\n\n"
+          if [ $total_bytes -gt 0 ]; then
+            for lang in "${!lang_total[@]}"; do
+              percentage=$(echo "scale=2; ${lang_total[$lang]} * 100 / $total_bytes" | bc)
+              output+="- **$lang**: $percentage%\n"
+            done
           else
-            echo "- No languages detected yet" >> languages.txt
+            output+="- No languages detected yet\n"
           fi
           
-          # Read the content
-          content=$(cat languages.txt)
+          # Use Python to update README
+          python3 - <<EOF
+          import re
+          from pathlib import Path
           
-          # Use Python to update README (more reliable than sed)
-          python3 -c "
-import re
-with open('README.md', 'r') as f:
-    content = f.read()
-start = '<!-- LANGUAGES_START -->'
-end = '<!-- LANGUAGES_END -->'
-new_content = '''$content'''
-pattern = re.compile(r'$start.*?$end', re.DOTALL)
-with open('README.md', 'w') as f:
-    f.write(pattern.sub(f'$start\n{new_content}\n$end', content))
-"
+          # Read the README
+          readme = Path("README.md")
+          text = readme.read_text()
+          
+          # Define the markers
+          start = "<!-- LANGUAGES_START -->"
+          end = "<!-- LANGUAGES_END -->"
+          
+          # Get the output from shell
+          output = """$output"""
+          
+          # Create the replacement
+          replacement = f"{start}\n{output}\n{end}"
+          
+          # Replace everything between the markers
+          pattern = re.compile(rf"{start}.*?{end}", re.DOTALL)
+          new_text = pattern.sub(replacement, text)
+          
+          # Write back
+          readme.write_text(new_text)
+          EOF
       
       - name: Commit changes
         run: |
