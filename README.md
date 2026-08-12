@@ -27,9 +27,7 @@
 
 ## 📊 GitHub Analytics
 
-### 📈 GitHub Stats
 
-### 📈 GitHub Stats
 
 ![Jereus06's GitHub Stats](https://readme-stats-vercel-main.vercel.app/api?username=Jereus06&show_icons=true&theme=transparent&hide_border=true&rank_icon=percentile)
 
