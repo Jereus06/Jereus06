@@ -34,73 +34,15 @@
 </p>
 
 <!-- LANGUAGES_START -->
-<div align="center">
+### Most Used Languages
 
-### 🎯 Languages Used
-
-<table>
-<tr>
-<td align="center" style="padding: 10px;">
-  <div style="font-size: 40px;">🐘</div>
-  <div style="font-size: 18px; font-weight: bold; color: #333;">67.68%</div>
-  <div style="font-size: 14px; color: #666;">PHP</div>
-  <div style="margin-top: 5px; width: 60px; height: 4px; background: #e0e0e0; border-radius: 2px; margin-left: auto; margin-right: auto;">
-    <div style="width: 67.68%; height: 4px; background: purple; border-radius: 2px;"></div>
-  </div>
-</td>
-<td align="center" style="padding: 10px;">
-  <div style="font-size: 40px;">🌐</div>
-  <div style="font-size: 18px; font-weight: bold; color: #333;">12.42%</div>
-  <div style="font-size: 14px; color: #666;">HTML</div>
-  <div style="margin-top: 5px; width: 60px; height: 4px; background: #e0e0e0; border-radius: 2px; margin-left: auto; margin-right: auto;">
-    <div style="width: 12.42%; height: 4px; background: orange; border-radius: 2px;"></div>
-  </div>
-</td>
-<td align="center" style="padding: 10px;">
-  <div style="font-size: 40px;">🚀</div>
-  <div style="font-size: 18px; font-weight: bold; color: #333;">11.33%</div>
-  <div style="font-size: 14px; color: #666;">Hack</div>
-  <div style="margin-top: 5px; width: 60px; height: 4px; background: #e0e0e0; border-radius: 2px; margin-left: auto; margin-right: auto;">
-    <div style="width: 11.33%; height: 4px; background: gray; border-radius: 2px;"></div>
-  </div>
-</td>
-<td align="center" style="padding: 10px;">
-  <div style="font-size: 40px;">⚡</div>
-  <div style="font-size: 18px; font-weight: bold; color: #333;">7.80%</div>
-  <div style="font-size: 14px; color: #666;">C++</div>
-  <div style="margin-top: 5px; width: 60px; height: 4px; background: #e0e0e0; border-radius: 2px; margin-left: auto; margin-right: auto;">
-    <div style="width: 7.80%; height: 4px; background: blue; border-radius: 2px;"></div>
-  </div>
-</td>
-</tr>
-<tr>
-<td align="center" style="padding: 10px;">
-  <div style="font-size: 40px;">🐍</div>
-  <div style="font-size: 18px; font-weight: bold; color: #333;">0.40%</div>
-  <div style="font-size: 14px; color: #666;">Python</div>
-  <div style="margin-top: 5px; width: 60px; height: 4px; background: #e0e0e0; border-radius: 2px; margin-left: auto; margin-right: auto;">
-    <div style="width: 0.40%; height: 4px; background: blue; border-radius: 2px;"></div>
-  </div>
-</td>
-<td align="center" style="padding: 10px;">
-  <div style="font-size: 40px;">🐳</div>
-  <div style="font-size: 18px; font-weight: bold; color: #333;">0.18%</div>
-  <div style="font-size: 14px; color: #666;">Dockerfile</div>
-  <div style="margin-top: 5px; width: 60px; height: 4px; background: #e0e0e0; border-radius: 2px; margin-left: auto; margin-right: auto;">
-    <div style="width: 0.18%; height: 4px; background: blue; border-radius: 2px;"></div>
-  </div>
-</td>
-<td align="center" style="padding: 10px;">
-  <div style="font-size: 40px;">💻</div>
-  <div style="font-size: 18px; font-weight: bold; color: #333;">0.15%</div>
-  <div style="font-size: 14px; color: #666;">Batchfile</div>
-  <div style="margin-top: 5px; width: 60px; height: 4px; background: #e0e0e0; border-radius: 2px; margin-left: auto; margin-right: auto;">
-    <div style="width: 0.15%; height: 4px; background: gray; border-radius: 2px;"></div>
-  </div>
-</td>
-</tr>
-</table>
-</div>
+- PHP 67.68%
+- HTML 12.42%
+- Hack 11.33%
+- C++ 7.80%
+- Python 0.40%
+- Dockerfile 0.18%
+- Batchfile 0.15%
 
 <!-- LANGUAGES_END -->
 
