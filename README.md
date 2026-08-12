@@ -33,9 +33,8 @@
   <img src="https://github-profile-summary-cards.vercel.app/api/cards/profile-details?username=Jereus06&theme=radical" alt="Profile Details" />
 </p>
 
-<p align="center">
-  <img src="https://github-profile-summary-cards.vercel.app/api/cards/most-commit-language?username=Jereus06&theme=radical" alt="Top Languages" />
-</p>
+<!-- LANGUAGES_START -->
+<!-- LANGUAGES_END -->
 
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=Jereus06&theme=radical" alt="GitHub Streak" />
