@@ -3,7 +3,7 @@
 
 <p align="left"> <img src="https://komarev.com/ghpvc/?username=jerichohilario&label=Profile%20views&color=0e75b6&style=flat" alt="jerichohilario" /> </p>
 
-- 🔭 I’m currently working on **_[your project name]_**
+- 🔭 I’m currently working on **_my BSCS-Data Science Thesis project_**
 
 - 🌱 I’m currently learning:
   - **Apache Spark** for big data processing
@@ -20,7 +20,7 @@
 
 - 📫 How to reach me: **jerichohilario6@gmail.com**
 
-- ⚡ Know about my experiences: **[your resume link]**
+- ⚡ Know about my experiences: **https://jereus06.github.io/portfolio.web/**
 
 <h3 align="left">Connect with me:</h3>
 <p align="left">
