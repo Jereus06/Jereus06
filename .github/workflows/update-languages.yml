@@ -12,8 +12,9 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       
-      - name: Fetch languages and create circle badges
+      - name: Fetch languages and create pie chart
         run: |
+          # Fetch all repos
           repos=$(curl -s "https://api.github.com/users/Jereus06/repos?per_page=100" | jq -r '.[].name')
           
           declare -A lang_total
@@ -28,10 +29,63 @@ jobs:
             done
           done
           
-          output='<div align="center">\n\n### 🎯 Languages Used\n\n'
+          # Colors for languages
+          declare -A colors
+          colors["Python"]="#3776AB"
+          colors["JavaScript"]="#F7DF1E"
+          colors["TypeScript"]="#3178C6"
+          colors["PHP"]="#777BB4"
+          colors["HTML"]="#E34F26"
+          colors["CSS"]="#1572B6"
+          colors["C++"]="#00599C"
+          colors["Go"]="#00ADD8"
+          colors["Java"]="#007396"
+          colors["Ruby"]="#CC342D"
+          colors["Hack"]="#878787"
+          colors["Dockerfile"]="#2496ED"
+          colors["Batchfile"]="#4D4D4D"
           
-          # Create circle progress bars
-          output+='<table>\n<tr>\n'
+          # Build SVG pie chart
+          output='<div align="center">\n\n### 🎯 Languages Used\n\n'
+          output+='<svg width="400" height="250" xmlns="http://www.w3.org/2000/svg">\n'
+          output+='  <circle cx="100" cy="120" r="80" fill="white" stroke="#333" stroke-width="2"/>\n'
+          
+          # Calculate angles and draw slices
+          start_angle=0
+          count=0
+          for lang in $(for l in "${!lang_total[@]}"; do echo "${lang_total[$l]} $l"; done | sort -rn | awk '{print $2}'); do
+            bytes=${lang_total[$lang]}
+            percentage=$(echo "scale=6; $bytes * 100 / $total_bytes" | bc)
+            angle=$(echo "scale=6; $percentage * 3.6" | bc | cut -d. -f1)
+            
+            if [ $angle -gt 0 ]; then
+              end_angle=$((start_angle + angle))
+              
+              # Calculate SVG arc coordinates
+              start_rad=$(echo "scale=6; $start_angle * 3.14159 / 180" | bc -l)
+              end_rad=$(echo "scale=6; $end_angle * 3.14159 / 180" | bc -l)
+              
+              x1=$(echo "scale=0; 100 + 80 * c($start_rad)" | bc -l)
+              y1=$(echo "scale=0; 120 + 80 * s($start_rad)" | bc -l)
+              x2=$(echo "scale=0; 100 + 80 * c($end_rad)" | bc -l)
+              y2=$(echo "scale=0; 120 + 80 * s($end_rad)" | bc -l)
+              
+              large_arc=$( [ $angle -gt 180 ] && echo 1 || echo 0 )
+              
+              color="${colors[$lang]:-#888888}"
+              output+='  <path d="M100 120 L'"$x1 $y1"' A80 80 0 '"$large_arc"' 1 '"$x2 $y2"' Z" fill="'"$color"'" stroke="white" stroke-width="2"/>\n'
+              
+              start_angle=$end_angle
+              count=$((count + 1))
+            fi
+          done
+          
+          output+='  <circle cx="100" cy="120" r="40" fill="white" stroke="#333" stroke-width="2"/>\n'
+          output+='  <text x="100" y="120" text-anchor="middle" font-size="14" font-weight="bold" fill="#333">'$count' langs</text>\n'
+          output+='</svg>\n\n'
+          
+          # Add legend
+          output+='<table>\n'
           count=0
           for lang in $(for l in "${!lang_total[@]}"; do echo "${lang_total[$l]} $l"; done | sort -rn | awk '{print $2}'); do
             bytes=${lang_total[$lang]}
@@ -39,23 +93,22 @@ jobs:
             if [[ $percentage == .* ]]; then
               percentage="0$percentage"
             fi
-            # Calculate circle stroke
-            dash=$(echo "scale=0; $percentage * 2.83" | bc)
-            output+='<td align="center">\n'
-            output+='  <svg width="80" height="80" viewBox="0 0 80 80">\n'
-            output+='    <circle cx="40" cy="40" r="30" fill="none" stroke="#eee" stroke-width="8"/>\n'
-            output+='    <circle cx="40" cy="40" r="30" fill="none" stroke="#4CAF50" stroke-width="8" stroke-dasharray="'"$dash"' 283" stroke-dashoffset="0" transform="rotate(-90 40 40)"/>\n'
-            output+='    <text x="40" y="40" text-anchor="middle" font-size="14" font-weight="bold" fill="#333" dy=".3em">'"$percentage"'%</text>\n'
-            output+='  </svg>\n'
-            output+='  <div><strong>'$lang'</strong></div>\n'
-            output+='</td>\n'
-            count=$((count + 1))
             if [ $((count % 4)) -eq 0 ]; then
-              output+='</tr>\n<tr>\n'
+              output+='  <tr>\n'
             fi
+            color="${colors[$lang]:-#888888}"
+            output+='    <td><span style="display:inline-block;width:12px;height:12px;background:'$color';border-radius:50%;"></span> <strong>'$lang'</strong> '$percentage'%</td>\n'
+            if [ $((count % 4)) -eq 3 ]; then
+              output+='  </tr>\n'
+            fi
+            count=$((count + 1))
           done
-          output+='</tr>\n</table>\n</div>\n'
+          if [ $((count % 4)) -ne 0 ]; then
+            output+='  </tr>\n'
+          fi
+          output+='</table>\n</div>\n'
           
+          # Use Python to update README
           python3 - <<EOF
           import re
           from pathlib import Path
@@ -78,5 +131,5 @@ jobs:
           git config --local user.email "action@github.com"
           git config --local user.name "GitHub Action"
           git add README.md
-          git diff --staged --quiet || git commit -m "Update languages with circles [skip ci]"
+          git diff --staged --quiet || git commit -m "Update languages with pie chart [skip ci]"
           git push || echo "No changes to push"
