@@ -11,8 +11,6 @@
   - **MLOps tools** (MLflow, Docker, Kubernetes)
   - **Cloud AI platforms** (AWS SageMaker, GCP Vertex AI)
 
-- 📫 How to reach me: **jerichohilario6@gmail.com**
-
 - ⚡ Know about my experiences: **https://jereus06.github.io/portfolio.web/**
 
 <h3 align="left">Connect with me:</h3>
