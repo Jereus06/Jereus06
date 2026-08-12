@@ -35,7 +35,7 @@
   <br />
   
   <!-- Top Languages (Compact Bar) -->
-  <img src="https://readme-stats-vercel-main.vercel.app/api/top-langs/?username=Jereus06&layout=compact&theme=transparent&hide_border=true&langs_count=6" alt="Top Languages" />
+  <img src="https://readme-stats-vercel-main.vercel.app/api/top-langs/?username=Jereus06&layout=compact&theme=highcontrast&hide_border=true&langs_count=6" alt="Top Languages" />
   
   <br />
   
