@@ -27,70 +27,18 @@
 
 ## 📊 GitHub Analytics
 
+### 📈 GitHub Stats
 <p align="center">
-  <a href="https://github.com/Jereus06">
-    <img height="180em" src="https://github-readme-stats.vercel.app/api?username=Jereus06&show_icons=true&theme=radical&include_all_commits=true&count_private=true"/>
-  </a>
-  <a href="https://github.com/Jereus06">
-    <img height="180em" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Jereus06&layout=compact&langs_count=8&theme=radical"/>
-  </a>
+  <img src="https://github-readme-stats.vercel.app/api?username=Jereus06&show_icons=true&theme=radical&include_all_commits=true&count_private=true" alt="GitHub Stats" />
 </p>
 
+### 🧠 Most Used Languages
+<p align="center">
+  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=Jereus06&layout=compact&langs_count=8&theme=radical" alt="Top Languages" />
+</p>
+
+### 🔥 Contribution Streak
 <p align="center">
   <img src="https://github-readme-streak-stats.herokuapp.com/?user=Jereus06&theme=radical" alt="GitHub Streak" />
 </p>
-
-### 📈 Detailed Stats
-
-| Metric | Value |
-|--------|-------|
-| ⭐ Total Stars Earned | ![GitHub Stars](https://img.shields.io/github/stars/Jereus06?style=flat-square&label=Stars) |
-| 📝 Total Commits | ![GitHub Commits](https://img.shields.io/badge/dynamic/json?color=blue&label=Commits&query=total&url=https%3A%2F%2Fapi.github.com%2Fusers%2FJereus06%2Frepos%3Fper_page%3D100&suffix=%20commits) |
-| 🔀 Total PRs | ![GitHub PRs](https://img.shields.io/badge/dynamic/json?color=green&label=PRs&query=%24%5B0%5D.total_count&url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Dauthor%3AJereus06%2Btype%3Apr) |
-| 🐛 Total Issues | ![GitHub Issues](https://img.shields.io/badge/dynamic/json?color=orange&label=Issues&query=%24%5B0%5D.total_count&url=https%3A%2F%2Fapi.github.com%2Fsearch%2Fissues%3Fq%3Dauthor%3AJereus06%2Btype%3Aissue) |
-| 📅 Contributions (last year) | ![GitHub Contributions](https://img.shields.io/badge/dynamic/json?color=purple&label=Contributions&query=total&url=https%3A%2F%2Fgithub-contributions-api.juhuu.xyz%2Fuser%2FJereus06) |
-What I Fixed
-Issue	Fix
-❌ Duplicate "Data Visualization" row	✅ Removed the duplicate
-❌ Missing "Data Analytics" category	✅ Added it back
-❌ Missing "Detailed Stats" table	✅ Added it below the graphs
-What's Included in GitHub Analytics
-Section	What It Shows
-GitHub Stats	Total stars, commits, PRs, issues
-Top Languages	Your most used languages
-Streak Stats	Current and longest contribution streaks
-Detailed Stats Table	Stars, Commits, PRs, Issues, Contributions
-Preview of Your Profile Now
-text
-┌─────────────────────────────────────────────┐
-│  Hi 👋, I'm Jericho                        │
-│  Data science student who believes...       │
-├─────────────────────────────────────────────┤
-│  [Profile views]                           │
-│  - Working on Thesis project               │
-│  - Learning Spark, TensorFlow, MLOps       │
-│  - Portfolio link                          │
-├─────────────────────────────────────────────┤
-│  Connect with me: [LI] [FB] [Dev.to]       │
-├─────────────────────────────────────────────┤
-│  Tech Stack:                               │
-│  ┌──────────────────────────────────────┐  │
-│  │ Data Science & ML │ Python, Pandas..│  │
-│  │ Data Analytics    │ Excel, Power BI..│  │
-│  │ Databases         │ MongoDB, SQL...  │  │
-│  │ Languages         │ JS, TS, Go...   │  │
-│  │ Tools & Cloud     │ Docker, AWS...  │  │
-│  │ Data Viz          │ Matplotlib...   │  │
-│  └──────────────────────────────────────┘  │
-├─────────────────────────────────────────────┤
-│  📊 GitHub Analytics                       │
-│  [Stats Graph] [Languages Graph]           │
-│  [Streak Graph]                            │
-│  ┌──────────────────────────────────────┐  │
-│  │ ⭐ Stars: 0   📝 Commits: 70       │  │
-│  │ 🔀 PRs: 8     🐛 Issues: 2        │  │
-│  └──────────────────────────────────────┘  │
-└─────────────────────────────────────────────┘
-Ready to copy and paste! 🚀
-
 
