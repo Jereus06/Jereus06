@@ -41,5 +41,5 @@
   
   <!-- GitHub Streak Stats -->
   <p align="center">
-  [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Jereus06&theme=blue-green&hide_border=true)](https://github-readme-streak-stats.herokuapp.com/?user=Jereus06)
+  [![GitHub Streak](https://github-readme-streak-stats.herokuapp.com/?user=Jereus06&theme=blue-green&hide_border=true&border_radius=4.5&card_width=495&card_height=195)](https://github-readme-streak-stats.herokuapp.com/?user=Jereus06)
 </p>
