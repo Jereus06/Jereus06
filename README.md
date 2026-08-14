@@ -41,5 +41,5 @@
   
   <!-- GitHub Streak Stats -->
   <p align="center">
-  [![GitHub Streak](https://streak-stats.demolab.com/?user=Jereus06)](https://git.io/streak-stats)
+  [![GitHub Streak](https://github-readme-streak-stats-henna-eta.vercel.app/?user=Jereus06&theme=radical&hide_border=true)](https://github-readme-streak-stats-henna-eta.vercel.app/?user=Jereus06)
 </p>
