@@ -40,5 +40,6 @@
   <br />
   
   <!-- GitHub Streak Stats -->
-  ![Jereus06's WakaTime Stats](https://readme-stats-vercel-main.vercel.app/api/wakatime?username=Jereus06&theme=highcontrast&hide_border=true)
+  <p align="center">
+  <img src="https://github-readme-streak-stats-main.vercel.app/?user=Jereus06&theme=radical&hide_border=true" alt="GitHub Streak" />
 </p>
