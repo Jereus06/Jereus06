@@ -41,5 +41,5 @@
   
   <!-- GitHub Streak Stats -->
   <p align="center">
-  <img src="https://github-readme-streak-stats-main.vercel.app/?user=Jereus06&theme=radical&hide_border=true" alt="GitHub Streak" />
+  [![GitHub Streak](https://github-readme-streak-stats-main.vercel.app/?user=Jereus06&theme=radical&hide_border=true)](https://github-readme-streak-stats-main.vercel.app/?user=Jereus06)
 </p>
